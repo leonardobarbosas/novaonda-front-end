@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  background-color: #d9d9d9;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5%;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 120px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-text-container {
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+.header-text-container:hover {
+  transition: 0.3s;
+  font-size: 3rem;
+  text-decoration: none;
+  color: #0098ee;
+  -webkit-text-stroke: 1px black;
+}
+
+.main-content {
+  height: 100vh;
+  background-image: linear-gradient(#24242452, #3e3e3ea6),
+    url("../img/background-praia.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
