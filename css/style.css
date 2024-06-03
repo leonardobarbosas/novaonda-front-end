@@ -27,6 +27,17 @@ header.scrolled {
     transition: 0.5s;
     height: 80px;
   }
+
+  .header-text-container {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+  }
+  .header-text-container:hover {
+    transition: 0.3s;
+    font-size: 2.3rem;
+    color: #0098ee;
+  }
 }
 
 header nav {
@@ -97,10 +108,46 @@ ul {
 
 #parceiros {
   display: flex;
+  align-items: center;
   flex-direction: column;
   height: 100vh;
 }
 
 #ongs-parceiras-h1 {
   color: #0098ee;
+}
+
+.ongs-container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  height: 550px;
+  overflow: auto;
+  gap: 20px;
+}
+.ongs-container::-webkit-scrollbar {
+  width: 10px;
+}
+.ongs-container::-webkit-scrollbar-thumb {
+  background-color: #94bfff;
+  border-radius: 10px;
+}
+
+.ong-card {
+  width: 350px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #94bfff;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.ong-img {
+  max-height: 300px;
+  border-radius: 10px;
 }

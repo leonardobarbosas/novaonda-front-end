@@ -10,23 +10,14 @@ ongs = [
       "Redução da poluição por plásticos, conservação de habitats marinhos e apoio a políticas ambientais.",
   },
   {
-    name: "Sea Shepherd",
+    name: "Marine Conservation Institute",
     photo:
-      "https://firebasestorage.googleapis.com/v0/b/novaonda-5623e.appspot.com/o/DALL·E%202024-05-29%2008.28.51%20-%20Logo%20of%20Sea%20Shepherd_%20a%20bold%20and%20striking%20design%20featuring%20a%20black%20and%20white%20color%20scheme%2C%20with%20a%20skull%20and%20crossbones%20motif%20combined%20with%20ocean%20eleme.webp?alt=media&token=bd9d14f4-543b-47b8-a409-a79857889890",
-    cause: "Defesa da vida marinha",
+      "https://firebasestorage.googleapis.com/v0/b/novaonda-5623e.appspot.com/o/DALL·E%202024-05-29%2008.32.29%20-%20Logo%20of%20Marine%20Conservation%20Institute_%20a%20professional%20and%20authoritative%20design%20featuring%20a%20marine%20icon%20such%20as%20a%20dolphin%20or%20whale%2C%20with%20colors%20like%20bl.webp?alt=media&token=135bebbf-e3a6-4198-b259-389fc0e7854e",
+    cause: "Conservação marinha",
     about:
-      "Sea Shepherd é uma organização internacional sem fins lucrativos dedicada à conservação da vida marinha, realizando ações diretas para proteger os oceanos.",
+      "Marine Conservation Institute é dedicado à proteção de ecossistemas marinhos e à promoção de políticas de conservação eficazes para garantir a saúde dos oceanos.",
     helps:
-      "Combate à caça ilegal de baleias, conservação de recifes de corais e combate à pesca predatória.",
-  },
-  {
-    name: "Surfrider Foundation",
-    photo:
-      "https://firebasestorage.googleapis.com/v0/b/novaonda-5623e.appspot.com/o/DALL·E%202024-05-29%2008.28.52%20-%20Logo%20of%20Surfrider%20Foundation_%20a%20vibrant%20and%20dynamic%20design%20featuring%20a%20wave%20icon%20with%20blue%20and%20white%20colors%2C%20representing%20the%20protection%20of%20beaches%20an.webp?alt=media&token=91211f13-9924-4085-853f-4220bff7fe08",
-    cause: "Proteção das praias e oceanos",
-    about:
-      "Surfrider Foundation é dedicada à proteção e apreciação dos oceanos, ondas e praias do mundo, através de uma rede ativa de voluntários.",
-    helps: "Limpeza de praias, advocacia ambiental e educação comunitária.",
+      "Estabelecimento de reservas marinhas, pesquisa sobre biodiversidade marinha e políticas de conservação.",
   },
   {
     name: "The Ocean Cleanup",
@@ -59,13 +50,41 @@ ongs = [
       "Campanhas de limpeza subaquática, advocacy contra a poluição marinha e conservação de espécies ameaçadas.",
   },
   {
-    name: "Marine Conservation Institute",
+    name: "Surfrider Foundation",
     photo:
-      "https://firebasestorage.googleapis.com/v0/b/novaonda-5623e.appspot.com/o/DALL·E%202024-05-29%2008.32.29%20-%20Logo%20of%20Marine%20Conservation%20Institute_%20a%20professional%20and%20authoritative%20design%20featuring%20a%20marine%20icon%20such%20as%20a%20dolphin%20or%20whale%2C%20with%20colors%20like%20bl.webp?alt=media&token=135bebbf-e3a6-4198-b259-389fc0e7854e",
-    cause: "Conservação marinha",
+      "https://firebasestorage.googleapis.com/v0/b/novaonda-5623e.appspot.com/o/DALL·E%202024-05-29%2008.28.52%20-%20Logo%20of%20Surfrider%20Foundation_%20a%20vibrant%20and%20dynamic%20design%20featuring%20a%20wave%20icon%20with%20blue%20and%20white%20colors%2C%20representing%20the%20protection%20of%20beaches%20an.webp?alt=media&token=91211f13-9924-4085-853f-4220bff7fe08",
+    cause: "Proteção das praias e oceanos",
     about:
-      "Marine Conservation Institute é dedicado à proteção de ecossistemas marinhos e à promoção de políticas de conservação eficazes para garantir a saúde dos oceanos.",
+      "Surfrider Foundation é dedicada à proteção e apreciação dos oceanos, ondas e praias do mundo, através de uma rede ativa de voluntários.",
+    helps: "Limpeza de praias, advocacia ambiental e educação comunitária.",
+  },
+  {
+    name: "Sea Shepherd",
+    photo:
+      "https://firebasestorage.googleapis.com/v0/b/novaonda-5623e.appspot.com/o/DALL·E%202024-05-29%2008.28.51%20-%20Logo%20of%20Sea%20Shepherd_%20a%20bold%20and%20striking%20design%20featuring%20a%20black%20and%20white%20color%20scheme%2C%20with%20a%20skull%20and%20crossbones%20motif%20combined%20with%20ocean%20eleme.webp?alt=media&token=bd9d14f4-543b-47b8-a409-a79857889890",
+    cause: "Defesa da vida marinha",
+    about:
+      "Sea Shepherd é uma organização internacional sem fins lucrativos dedicada à conservação da vida marinha, realizando ações diretas para proteger os oceanos.",
     helps:
-      "Estabelecimento de reservas marinhas, pesquisa sobre biodiversidade marinha e políticas de conservação.",
+      "Combate à caça ilegal de baleias, conservação de recifes de corais e combate à pesca predatória.",
   },
 ];
+
+var ongsSection = document.getElementById("parceiros");
+var ongDiv = document.createElement("div");
+ongDiv.classList.add("ongs-container");
+
+ongsSection.appendChild(ongDiv);
+
+ongs.forEach(function (ong) {
+  var div = document.createElement("div");
+  div.classList.add("ong-card");
+
+  div.innerHTML = `
+    <img src="${ong.photo}" alt="${ong.name}" class="ong-img">
+    <h2>${ong.name}</h2>
+    <p>Causa: ${ong.cause}</p>
+  `;
+
+  ongDiv.appendChild(div);
+});
