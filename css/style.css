@@ -18,6 +18,16 @@ header {
   justify-content: space-between;
   padding: 10px 5%;
 }
+header.scrolled {
+  transition: 0.5s ease-in-out;
+  background: #242424;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  .logo {
+    transition: 0.5s;
+    height: 80px;
+  }
+}
 
 header nav {
   display: flex;
@@ -55,4 +65,42 @@ ul {
     url("../img/background-praia.png");
   background-size: cover;
   background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.div-h1-container {
+  display: flex;
+}
+
+.h1-container {
+  font-size: 7rem;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  -webkit-text-stroke: 1px black;
+}
+
+#onda-h1-content {
+  color: #0098ee;
+}
+
+.main-content h2 {
+  font-size: 4rem;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+}
+
+#parceiros {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#ongs-parceiras-h1 {
+  color: #0098ee;
 }
