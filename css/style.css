@@ -406,6 +406,29 @@ form input {
     width: 90%;
     font-size: 1rem;
   }
+  .h1-mission-and-values {
+    font-size: 4rem;
+  }
+  .values {
+    width: 100%;
+    flex-direction: column;
+  }
+  .values-container {
+    width: 100%;
+  }
+
+  .mission-container p {
+    width: 90%;
+    font-size: 1.2rem;
+  }
+  #slide-2 .mission-container p {
+    width: 90%;
+    font-size: 1.2rem;
+  }
+
+  .mission-container img {
+    display: none;
+  }
 }
 
 .menu-burguer-container.show ~ .nav-header {
