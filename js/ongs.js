@@ -125,5 +125,5 @@ document.addEventListener("DOMContentLoaded", function () {
     slides[currentSlide].classList.add("active");
   }
 
-  setInterval(nextSlide, 10000);
+  setInterval(nextSlide, 7000);
 });

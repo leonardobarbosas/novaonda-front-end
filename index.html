@@ -18,6 +18,24 @@
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/index.js" defer></script>
     <script src="./js/ongs.js" defer></script>
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "03ba1a4c-01dc-4534-8607-6e7c1dd9011c",
+        region: "au-syd",
+        serviceInstanceID: "6eff5d60-dcbe-4f22-a974-6e82005a44f4",
+        onLoad: async (instance) => {
+          await instance.render();
+        },
+      };
+      setTimeout(function () {
+        const t = document.createElement("script");
+        t.src =
+          "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+          (window.watsonAssistantChatOptions.clientVersion || "latest") +
+          "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
     <title>NovaOnda</title>
   </head>
   <body>
@@ -131,7 +149,39 @@
           </div>
         </div>
       </section>
-      <section id="projeto"></section>
+      <section id="projeto">
+        <h1 class="h1-about-project">Sobre o Projeto</h1>
+        <div class="about-project-container">
+          <p>
+            NovaOnda é uma plataforma inovadora dedicada a garantir que as
+            atividades humanas nos oceanos sejam ecologicamente responsáveis,
+            socialmente inclusivas e economicamente viáveis a longo prazo.
+            Criada para enfrentar os desafios críticos que nossos oceanos
+            enfrentam, a NovaOnda promove práticas de gestão ambiental,
+            tecnologias avançadas e a colaboração entre governos, empresas, ONGs
+            e comunidades locais.
+          </p>
+          <p>
+            Os oceanos são vitais para a saúde do nosso planeta, mas estão sob
+            ameaça devido à destruição de habitats marinhos, poluição, pesca
+            excessiva e mudanças climáticas. Esses problemas não apenas afetam
+            os ecossistemas marinhos, mas também têm um impacto direto na
+            economia global, nas comunidades costeiras e na biodiversidade.
+          </p>
+          <p>
+            A visão da NovaOnda é se tornar a principal plataforma global para a
+            sustentabilidade oceânica, reconhecida por sua capacidade de
+            fomentar colaborações eficazes e promover práticas ecológicas,
+            sociais e econômicas inovadoras. Enxergamos um mundo onde todas as
+            atividades humanas nos oceanos são realizadas com responsabilidade e
+            respeito pelo meio ambiente, assegurando a saúde e a vitalidade dos
+            ecossistemas marinhos para as gerações futuras. A NovaOnda está
+            comprometida em ser um catalisador para a mudança positiva,
+            empoderando aqueles que trabalham para proteger nossos oceanos e
+            promovendo um futuro sustentável para todos.
+          </p>
+        </div>
+      </section>
     </main>
   </body>
 </html>
