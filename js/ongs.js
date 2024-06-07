@@ -69,14 +69,16 @@ ongs = [
       "Combate à caça ilegal de baleias, conservação de recifes de corais e combate à pesca predatória.",
   },
 ];
+let storedOngs = JSON.parse(localStorage.getItem("ongs")) || [];
+let initialOngs = ongs.concat(storedOngs);
 
-var ongsSection = document.getElementById("parceiros");
+//GET DE ONGS
+var ongsSection = document.getElementById("parceiros-ongs");
 var ongDiv = document.createElement("div");
 ongDiv.classList.add("ongs-container");
-
 ongsSection.appendChild(ongDiv);
 
-ongs.forEach(function (ong) {
+initialOngs.forEach(function (ong) {
   var div = document.createElement("div");
   div.classList.add("ong-card");
 
@@ -87,4 +89,41 @@ ongs.forEach(function (ong) {
   `;
 
   ongDiv.appendChild(div);
+});
+
+//POST DE ONGS
+document.getElementById("ong-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const data = {
+    name: document.getElementById("nome").value,
+    photo:
+      "https://firebasestorage.googleapis.com/v0/b/novaonda-5623e.appspot.com/o/DALL·E%202024-05-29%2008.28.50%20-%20Logo%20of%20Ocean%20Conservancy_%20an%20image%20with%20a%20clean%2C%20modern%20design%20featuring%20a%20blue%20wave%20and%20a%20white%20background%20symbolizing%20ocean%20protection.webp?alt=media&token=2ece230c-cdd5-4e1f-8eba-b2060ae0f111",
+    cause: document.getElementById("causa").value,
+    about: document.getElementById("sobre").value,
+    helps: document.getElementById("ajuda").value,
+  };
+
+  let ongs = JSON.parse(localStorage.getItem("ongs")) || [];
+
+  ongs.push(data);
+
+  localStorage.setItem("ongs", JSON.stringify(ongs));
+
+  window.location.reload();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  slides[0].classList.add("active");
+
+  function nextSlide() {
+    slides[currentSlide].classList.remove("active");
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add("active");
+  }
+
+  setInterval(nextSlide, 10000);
 });
