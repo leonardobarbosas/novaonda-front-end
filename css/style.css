@@ -351,3 +351,30 @@ form input {
   text-align: center;
   font-size: 1.3rem;
 }
+
+@media (max-width: 1199px) {
+  header {
+    display: flex;
+    align-items: center;
+  }
+  header nav {
+    background-color: #000;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 300;
+    gap: 65px;
+    transform: translate(100%);
+    transition: all 1s;
+  }
+}
+.menu-burguer-container.show ~ .header-content-container {
+  transform: translate(0);
+}
