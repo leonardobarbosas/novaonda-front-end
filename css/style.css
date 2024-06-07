@@ -384,6 +384,28 @@ form input {
   .main-content h2 {
     font-size: 2rem;
   }
+
+  .cadastro-ong-container {
+    flex-direction: column;
+  }
+  #titulo-cadastro {
+    width: 80%;
+    font-size: 3rem;
+  }
+}
+@media (max-width: 800px) {
+  form {
+    width: 95%;
+  }
+  .h1-about-project {
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+  }
+  .about-project-container p {
+    width: 90%;
+    font-size: 1rem;
+  }
 }
 
 .menu-burguer-container.show ~ .nav-header {
