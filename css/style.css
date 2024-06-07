@@ -357,7 +357,10 @@ form input {
     display: flex;
     align-items: center;
   }
-  header nav {
+  .logo {
+    height: 80px;
+  }
+  .nav-header {
     background-color: #000;
     height: 100vh;
     position: absolute;
@@ -374,7 +377,15 @@ form input {
     transform: translate(100%);
     transition: all 1s;
   }
+
+  .h1-container {
+    font-size: 4rem;
+  }
+  .main-content h2 {
+    font-size: 2rem;
+  }
 }
-.menu-burguer-container.show ~ .header-content-container {
+
+.menu-burguer-container.show ~ .nav-header {
   transform: translate(0);
 }
